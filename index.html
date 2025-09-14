@@ -542,29 +542,17 @@
     //   'https://api.olamaps.io/tiles/v1/styles/default-light-standard/static/19.17,73.24,15/555x336.png?marker=19.17%2C73.24%7Cred%7Cscale%3A0.9&path=19.17%2C73.24%7C19.172256558851505%2C73.24069579579206%7Cwidth%3A6%7Cstroke%3A%2300ff44&api_key=2tb1ViJ1jX9YxeCiNTW5Ztf2aVIAkxB9sVjYzAZ8',
     //   'map',
     // )
-    const marker = olaMaps
-        .addMarker()
-        .addTo(map)
-      
-      function onDrag() {
-        const lngLat = marker.getLngLat()
-      }
-      marker.on('drag', onDrag)
-      let olaMap = olaMaps.init({
-          style: 'https://api.olamaps.io/tiles/vector/v1/styles/default-light-standard/style.json',
-          container: 'map',
-          center: [19.172256558851505, 73.24069579579206],
-          zoom: 15,
+     const myMap = olaMaps.init({
+        style: "https://api.olamaps.io/tiles/vector/v1/styles/default-light-standard/style.json",
+        container: 'map',
+        center: [19.172256558851505, 73.24069579579206],
+        zoom: 15,
       });
-      
-      olaMaps
-        .addMarker()
-        .setPopup(popup)
-        .addTo(map)
   </script>
 </body>
 
 </html>
+
 
 
 
