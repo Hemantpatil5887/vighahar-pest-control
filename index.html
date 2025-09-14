@@ -431,7 +431,7 @@
         <div class="col-md-6">
           <div class="map_container">
             <div class="map">
-              <div id="googleMap" style="width:100%;height:100%;">
+              <div id="map" style="width:100%;height:100%;">
               </div>
             </div>
           </div>
@@ -535,7 +535,18 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBW-UwYsGOvQYdBln-t6Si-YGxU4EKFWkw&callback=myMap"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://www.unpkg.com/olamaps-web-sdk@latest/dist/olamaps-web-sdk.umd.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    const olaMaps = new OlaMaps({
+      apiKey: ['ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBakkSmtDW3BMBJbsUvB8qT9UBzrU86/ACagpAH4e/+6 hemantpatil5887@gmail.com'],
+    })
+    olaMaps.getStaticMap(
+      'https://api.olamaps.io/tiles/v1/styles/default-light-standard/static/77.61,12.93,15/800x600.png?marker=77.61%2C12.93%7Cred%7Cscale%3A0.9&path=77.61%2C12.93%7C77.61190639293811%2C12.937637130956137%7Cwidth%3A6%7Cstroke%3A%2300ff44&api_key=2tb1ViJ1jX9YxeCiNTW5Ztf2aVIAkxB9sVjYzAZ8',
+      'map',
+    )
+  </script>
 </body>
 
 </html>
+
